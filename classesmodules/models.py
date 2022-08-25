@@ -10,7 +10,7 @@ class Module(models.Model):
 
 class Class(models.Model):
     name = models.CharField(max_length=200)
-    date = models.DateField()
+    date = models.DateTimeField()
 
     module = models.ForeignKey(Module, on_delete=models.CASCADE)
 

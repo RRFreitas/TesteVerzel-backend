@@ -9,7 +9,7 @@ migrate-up:
 	python3 manage.py migrate
 
 make-migrations:
-	python3 manage.py makemigration classesmodules
+	python3 manage.py makemigrations classesmodules
 
 dev-run:
 	python3 manage.py runserver
