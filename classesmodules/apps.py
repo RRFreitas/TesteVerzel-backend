@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ClassmodulesConfig(AppConfig):
+class ClassesmodulesConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'classmodules'
+    name = 'classesmodules'

@@ -8,6 +8,9 @@ deps-down:
 migrate-up:
 	python3 manage.py migrate
 
+make-migrations:
+	python3 manage.py makemigration classesmodules
+
 dev-run:
 	python3 manage.py runserver
 
