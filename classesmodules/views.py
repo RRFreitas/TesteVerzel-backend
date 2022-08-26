@@ -16,7 +16,9 @@ class GroupViewset(viewsets.ModelViewSet):
 class ModuleViewset(viewsets.ModelViewSet):
     queryset = Module.objects.all().order_by('name')
     serializer_class = ModuleSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class ClassViewset(viewsets.ModelViewSet):
     queryset = Class.objects.all().order_by('name')
     serializer_class = ClassSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
