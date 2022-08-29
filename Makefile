@@ -1,6 +1,5 @@
 deps-up:
 	docker-compose up -d
-	docker attach testeverzel-wait-1 || true
 
 deps-down:
 	docker-compose down --volumes
