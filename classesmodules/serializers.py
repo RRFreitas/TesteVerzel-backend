@@ -12,14 +12,15 @@ class GroupSerializer(serializers.ModelSerializer):
         model = Group
         fields = ['id', 'name']
 
-class ModuleSerializer(serializers.ModelSerializer):
-    classes = serializers.StringRelatedField(many=True)
-
-    class Meta:
-        model = Module
-        fields = ['id', 'name', 'classes']
-
 class ClassSerializer(serializers.ModelSerializer):
     class Meta:
         model = Class
         fields = ['id', 'name', 'date', 'module']
+
+class ModuleSerializer(serializers.ModelSerializer):
+    classes = ClassSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Module
+        fields = ['id', 'name', 'description', 'classes']
+

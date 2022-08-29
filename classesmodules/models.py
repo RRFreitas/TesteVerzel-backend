@@ -4,6 +4,7 @@ from django.db import models
 
 class Module(models.Model):
     name = models.CharField(max_length=200)
+    description = models.CharField(max_length=400, null=True)
 
     def __str__(self):
         return self.name
