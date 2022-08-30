@@ -10,9 +10,8 @@ migrate-up:
 make-migrations:
 	python3 manage.py makemigrations classesmodules
 
+create-superuser:
+	python3 manage.py createsuperuser
+
 dev-run:
 	python3 manage.py runserver
-
-test: deps-down deps-up
-	AUTH_ENABLED=FALSE \
-	pytest -s
