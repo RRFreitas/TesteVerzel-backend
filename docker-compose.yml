@@ -22,7 +22,7 @@ services:
   wait:
     image: waisbrot/wait
     environment:
-      - TARGETS=postgres:5432
+      - TARGETS=postgres:5432,api:8000
 
 volumes:
   postgres-db-volume:
